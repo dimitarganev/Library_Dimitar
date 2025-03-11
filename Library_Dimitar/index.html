@@ -1,0 +1,85 @@
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог с книги</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">За нас</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="search">
+        <input type="text" id="searchInput" placeholder="Търсене на книги...">
+        <button onclick="searchBooks()">Търси</button>
+    </section>
+    
+    <section class="book-list" id="bookList">
+        <div class="book" data-title="Престъпление и наказание">
+            <h3>Престъпление и наказание</h3>
+            <p>Автор: Фьодор Достоевски</p>
+            <p class="description">Класически роман за престъпление и морал...</p>
+            <button onclick="showDetails('Престъпление и наказание', 'Фьодор Достоевски', 'Класически роман за престъпление и морал...')">Повече подробности</button>
+        </div>
+        <div class="book" data-title="1984">
+            <h3>1984</h3>
+            <p>Автор: Джордж Оруел</p>
+            <p class="description">Дистопичен роман за контрол и свобода...</p>
+            <button onclick="showDetails('1984', 'Джордж Оруел', 'Дистопичен роман за контрол и свобода...')">Повече подробности</button>
+        </div>
+        <div class="book" data-title="Триумфът на любовта">
+            <h3>Триумфът на любовта</h3>
+            <p>Автор: Пиер Бурдийо</p>
+            <p class="description">Размисли за любовта и човешките отношения...</p>
+            <button onclick="showDetails('Триумфът на любовта', 'Пиер Бурдийо', 'Размисли за любовта и човешките отношения...')">Повече подробности</button>
+        </div>
+        <div class="book" data-title="Майстора и Маргарита">
+            <h3>Майстора и Маргарита</h3>
+            <p>Автор: Михаил Булгаков</p>
+            <p class="description">Роман за любовта, мистиката и съветската реалност...</p>
+            <button onclick="showDetails('Майстора и Маргарита', 'Михаил Булгаков', 'Роман за любовта, мистиката и съветската реалност...')">Повече подробности</button>
+        </div>
+        <div class="book" data-title="Песен за огъня">
+            <h3>Песен за огъня</h3>
+            <p>Автор: Керъл Шелдон</p>
+            <p class="description">Епична история за приключения и вътрешни конфликти...</p>
+            <button onclick="showDetails('Песен за огъня', 'Керъл Шелдон', 'Епична история за приключения и вътрешни конфликти...')">Повече подробности</button>
+        </div>
+        <div class="book" data-title="Безсъние">
+            <h3>Безсъние</h3>
+            <p>Автор: Стивън Кинг</p>
+            <p class="description">Психологически трилър за човешкия ум и невъзможността да се спи...</p>
+            <button onclick="showDetails('Безсъние', 'Стивън Кинг', 'Психологически трилър за човешкия ум и невъзможността да се спи...')">Повече подробности</button>
+        </div>
+    </section>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalAuthor"></p>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 BookStore. Всички права запазени.</p>
+        <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
